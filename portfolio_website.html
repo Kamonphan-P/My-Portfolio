@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>Kamonphan Phannithiprasert | Data Analytics Manager & AI Specialist | Bangkok</title>
+  <meta name="description" content="Data Analytics Manager based in Bangkok. I build AI systems that actually get used — and help teams understand why they should trust them. 4+ years across insurance, oil & gas, and manufacturing." />
+  <meta name="keywords" content="Data Analytics, Machine Learning, AI, LLM, GenAI, Python, Bangkok, Data Scientist, Fraud Detection" />
+  <meta name="author" content="Kamonphan Phannithiprasert" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kamonphan Phannithiprasert — Data Analytics Manager" />
+  <meta property="og:description" content="I turn messy data into decisions people actually trust. Data Analytics Manager, Bangkok." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { max-width: 100%; display: block; }
+
+    /* ── TOKENS
+       All text colors pass WCAG AA (4.5:1) on white.
+       Color is never the ONLY differentiator — shapes, labels, and patterns reinforce meaning.
+    */
+    :root {
+      --white:      #FFFFFF;
+      --bg:         #F8F9FA;
+      --surface:    #FFFFFF;
+      --border:     #D1D5DB;
+      --text:       #111827;    /* 18.1:1 on white */
+      --text-sub:   #374151;    /* 11:1 on white */
+      --text-muted: #6B7280;    /* 4.6:1 on white */
+      --accent:     #1D4ED8;    /* blue 7.2:1 — safe for color-blind */
+      --accent-bg:  #EFF6FF;
+      --serif:      'Source Serif 4', Georgia, serif;
+      --sans:       'Inter', system-ui, sans-serif;
+      --radius:     6px;
+      --max-w:      1100px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Skip link for keyboard users */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 999;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 3rem);
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .nav-logo {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      text-decoration: none;
+      padding-bottom: 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a:focus {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+
+    /* HERO */
+    #hero {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(4rem, 10vh, 7rem) 0;
+    }
+
+    #hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid #BFDBFE;
+      border-radius: 100px;
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-sub);
+      line-height: 1.8;
+      max-width: 46ch;
+      margin-bottom: 2rem;
+    }
+
+    .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:hover { background: #1E40AF; border-color: #1E40AF; box-shadow: 0 4px 12px rgba(29,78,216,0.3); }
+    .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--text); background: var(--bg); }
+
+    .hero-stats {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .stat-item { display: flex; align-items: flex-start; gap: 1rem; }
+
+    .stat-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 8px;
+      background: var(--accent-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      line-height: 1.5;
+    }
+
+    /* SECTIONS */
+    section { padding: clamp(4rem, 8vh, 6rem) 0; }
+    section:nth-child(odd) { background: var(--white); }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      max-width: 60ch;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      color: var(--text-sub);
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+
+    .timeline { margin-top: 2.5rem; }
+
+    .timeline-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Shape + color differentiation: filled dot = work, hollow = education */
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.35rem;
+    }
+    .timeline-dot.edu {
+      background: transparent;
+      border: 2.5px solid var(--accent);
+    }
+
+    .timeline-year {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      min-width: 6.5rem;
+      padding-top: 0.05rem;
+    }
+
+    .timeline-role { font-size: 0.97rem; font-weight: 600; color: var(--text); line-height: 1.35; }
+    .timeline-company { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    /* Skills */
+    .skills-group { margin-bottom: 1.75rem; }
+
+    .skills-group-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.65rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-list { display: flex; flex-direction: column; gap: 0.45rem; }
+
+    .skill-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0.9rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    .skill-row i { font-size: 1rem; color: var(--accent); width: 1.2rem; text-align: center; }
+
+    /* WORK */
+    .subsection-heading {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .subsection-heading::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .project-card:hover, .project-card:focus-within {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+    }
+
+    .project-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--bg);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .project-thumb i { font-size: 2rem; color: var(--accent); }
+    .project-thumb-label { font-size: 0.7rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    .project-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+    .project-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+    .project-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .project-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; flex: 1; }
+    .project-link { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; font-weight: 600; color: var(--accent); margin-top: 0.5rem; }
+
+    /* Articles */
+    .articles-list {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .article-row {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr auto;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.1rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .article-row:last-child { border-bottom: none; }
+    .article-row:hover { background: var(--bg); }
+
+    .article-num { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+    .article-title { font-size: 0.97rem; font-weight: 500; color: var(--text); line-height: 1.45; }
+    .article-row:hover .article-title { color: var(--accent); }
+
+    .article-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid #BFDBFE;
+      border-radius: 100px;
+      padding: 0.2rem 0.65rem;
+      white-space: nowrap;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+
+    .contact-info-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; }
+    .contact-intro { font-size: 0.97rem; color: var(--text-sub); line-height: 1.8; margin-bottom: 2rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      text-decoration: none;
+      padding: 0.6rem;
+      border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
+    .contact-link:hover { background: var(--bg); color: var(--accent); }
+
+    .contact-link-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 6px;
+      background: var(--accent-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .form-group { margin-bottom: 1.25rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      resize: vertical;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.12);
+    }
+    .form-group textarea { min-height: 110px; }
+
+    #form-msg {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #047857;
+      margin-top: 0.75rem;
+      display: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--text);
+      color: #9CA3AF;
+      padding: 2.5rem 0;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-copy { font-size: 0.8rem; }
+    .footer-links { display: flex; gap: 1.25rem; }
+    .footer-links a { color: #9CA3AF; font-size: 1.1rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero-animate { animation: fadeIn 0.6s ease both; }
+    .hero-animate:nth-child(1) { animation-delay: 0.05s; }
+    .hero-animate:nth-child(2) { animation-delay: 0.18s; }
+    .hero-animate:nth-child(3) { animation-delay: 0.3s; }
+    .hero-animate:nth-child(4) { animation-delay: 0.42s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      #hero .container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-stats { margin-top: 1rem; }
+      .btn-group { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+      .article-row { grid-template-columns: 2rem 1fr; }
+      .article-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a class="nav-logo" href="#hero">Kamonphan P.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div>
+          <div class="hero-eyebrow hero-animate">
+            <i class="fas fa-circle" style="font-size:0.45rem;" aria-hidden="true"></i>
+            Open to what's next
+          </div>
+          <h1 id="hero-heading" class="hero-animate">
+            I turn messy data<br>into decisions<br>people trust
+          </h1>
+          <p class="hero-desc hero-animate">
+            Hey, I'm <strong>Kamonphan</strong> — a Data Analytics Manager based in Bangkok. I've spent 4+ years building AI systems that don't just look good in a presentation deck, but actually get used. My thing? Closing the gap between "the model said so" and "okay, let's do it."
+          </p>
+          <div class="btn-group hero-animate">
+            <a href="#work" class="btn btn-primary">
+              <i class="fas fa-briefcase" aria-hidden="true"></i> View my work
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Get in touch
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stats" role="list" aria-label="Key highlights">
+          <div class="stat-item" role="listitem">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></div>
+            <div>
+              <div class="stat-value">4+ years</div>
+              <div class="stat-label">Building AI that actually ships and gets used</div>
+            </div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-industry"></i></div>
+            <div>
+              <div class="stat-value">3 industries</div>
+              <div class="stat-label">Insurance · Oil &amp; Gas · Manufacturing — each one a new puzzle</div>
+            </div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+            <div>
+              <div class="stat-value">Business + Tech</div>
+              <div class="stat-label">I speak both languages — and I enjoy the translation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label">01 · About</p>
+        <h2 id="about-heading">A little about me</h2>
+        <p class="section-intro">Data nerd. Former geologist. Occasional instructor. Full-time bridge between "what does the model say?" and "what do we actually do about it?"</p>
+
+        <div class="about-grid">
+          <div class="about-text fade-up">
+            <p>I didn't start in data. I started underground — literally. My <strong>geology degree at Chulalongkorn</strong> taught me to find signal in noise, read layers of complexity, and always ask "but what's actually going on here?" Turns out that's basically 80% of data science.</p>
+            <p>After a <strong>Master's in Data Science &amp; Analytics at KMITL</strong>, I spent four years at VISAI doing everything from GenAI pipelines and LLM workflows to teaching machine learning concepts to rooms full of people who really didn't want to be there at 9am. (I like to think I won most of them over.)</p>
+            <p>These days I'm a <strong>Data Analytics Manager at Generali</strong>, where I lead fraud detection, cross-sell engines, and data strategy. My favourite part of the job is still the moment when a business stakeholder goes from "I don't really trust this model" to "wait, can we add more of these?"</p>
+            <p>Outside of work I write on Medium, break things in Python, and try to explain what I do to my family at dinner with varying success.</p>
+
+            <div class="timeline" aria-label="Career and education timeline">
+              <p class="timeline-label">Timeline</p>
+              <!-- Filled dot = work experience; hollow dot = education (shape + color = color-blind safe) -->
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-label="Work experience" role="img"></div>
+                <div class="timeline-year">Dec 2024 – Now</div>
+                <div>
+                  <div class="timeline-role">Data Analytics Manager</div>
+                  <div class="timeline-company">Generali · Insurance</div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot" aria-label="Work experience" role="img"></div>
+                <div class="timeline-year">2020 – Dec 2024</div>
+                <div>
+                  <div class="timeline-role">Data Scientist</div>
+                  <div class="timeline-company">VISAI · AI Solutions</div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot edu" aria-label="Education" role="img"></div>
+                <div class="timeline-year">2022 – 2024</div>
+                <div>
+                  <div class="timeline-role">M.Sc. Data Science &amp; Analytics</div>
+                  <div class="timeline-company">KMITL</div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot edu" aria-label="Education" role="img"></div>
+                <div class="timeline-year">2016 – 2020</div>
+                <div>
+                  <div class="timeline-role">B.Sc. Geology</div>
+                  <div class="timeline-company">Chulalongkorn University</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-up" role="region" aria-label="Skills">
+            <div class="skills-group">
+              <p class="skills-group-title">Machine Learning &amp; AI</p>
+              <div class="skills-list" role="list">
+                <div class="skill-row" role="listitem"><i class="fas fa-robot" aria-hidden="true"></i> GenAI &amp; LLM Workflows</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-brain" aria-hidden="true"></i> Predictive Modelling &amp; Clustering</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-file-alt" aria-hidden="true"></i> Text Analytics &amp; NLP</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-eye" aria-hidden="true"></i> Data Drift &amp; Model Monitoring</div>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <p class="skills-group-title">Technical Stack</p>
+              <div class="skills-list" role="list">
+                <div class="skill-row" role="listitem"><i class="fab fa-python" aria-hidden="true"></i> Python</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-database" aria-hidden="true"></i> SQL &amp; NoSQL</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-chart-bar" aria-hidden="true"></i> Power BI &amp; Power Automate</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-code-branch" aria-hidden="true"></i> MLflow &amp; GitLab</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-plug" aria-hidden="true"></i> API Integration</div>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <p class="skills-group-title">Management &amp; Strategy</p>
+              <div class="skills-list" role="list">
+                <div class="skill-row" role="listitem"><i class="fas fa-project-diagram" aria-hidden="true"></i> End-to-End Project Lead</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-users" aria-hidden="true"></i> Stakeholder Management</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Technical Instructor &amp; Training</div>
+                <div class="skill-row" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> Data Governance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- WORK -->
+    <section id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <p class="section-label">02 · Work</p>
+        <h2 id="work-heading">Things I've built &amp; written</h2>
+        <p class="section-intro">A few projects I'm proud of, plus articles where I try to make AI feel less intimidating — for engineers and non-engineers alike.</p>
+
+        <h3 class="subsection-heading fade-up">Key projects</h3>
+
+        <div class="projects-grid fade-up">
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/1280px-Above_Gotham.jpg"
+                alt="Insurance fraud detection — analysing claims patterns across large datasets"
+                style="width:100%;height:100%;object-fit:cover;"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Insurance · ML Engineering</span>
+              <h4 class="project-title">Multi-Line Claims Fraud Detection</h4>
+              <p class="project-desc">Insurance fraud is surprisingly creative. I designed a cross-functional detection system at Generali that spots high-risk health and accident claims — and built a daily automated alert so investigators aren't drowning in false positives.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Oil_platform_P-51_%28Brazil%29.jpg/1280px-Oil_platform_P-51_%28Brazil%29.jpg"
+                alt="Oil and gas platform — automated well-log interpretation using machine learning"
+                style="width:100%;height:100%;object-fit:cover;"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Oil &amp; Gas · ML Automation</span>
+              <h4 class="project-title">Automated Well-Log Interpretation</h4>
+              <p class="project-desc">Geologists spend a lot of time manually interpreting well logs. I built an ML pipeline to do the heavy lifting — cutting expert analysis time significantly and keeping the model honest with automated retraining and drift detection.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Steel_wire_rope_at_the_Pont_de_Normandie.JPG/1280px-Steel_wire_rope_at_the_Pont_de_Normandie.JPG"
+                alt="Steel cable close-up — metal commodity price prediction and forecasting system"
+                style="width:100%;height:100%;object-fit:cover;"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Manufacturing · Predictive Modelling</span>
+              <h4 class="project-title">Metal Price Prediction System</h4>
+              <p class="project-desc">Predicting metal prices is hard. Building a system that stays accurate over time is harder. I designed a forecasting pipeline with automated retraining and data-drift monitoring so it doesn't quietly go wrong six months after launch.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <h3 class="subsection-heading fade-up">Articles &amp; writing</h3>
+
+        <nav class="articles-list fade-up" aria-label="Articles published on Medium">
+          <a class="article-row"
+            href="https://medium.com/@xzrxbb/wound-segmentation-without-machine-learning-42c7ee97c21c"
+            target="_blank" rel="noopener noreferrer">
+            <span class="article-num" aria-hidden="true">01</span>
+            <span class="article-title">Wound Segmentation without Machine Learning</span>
+            <span class="article-badge">Computer Vision</span>
+          </a>
+          <a class="article-row"
+            href="https://medium.com/@xzrxbb/unleashing-the-power-of-generative-ai-a-comprehensive-dive-into-evolution-applications-and-bcaf6bfb6987"
+            target="_blank" rel="noopener noreferrer">
+            <span class="article-num" aria-hidden="true">02</span>
+            <span class="article-title">Unleashing the Power of Generative AI</span>
+            <span class="article-badge">GenAI</span>
+          </a>
+          <a class="article-row"
+            href="https://medium.com/@xzrxbb/governance-in-the-age-of-artificial-intelligence-navigating-ethics-evolution-and-policies-c4c2d57c1c46"
+            target="_blank" rel="noopener noreferrer">
+            <span class="article-num" aria-hidden="true">03</span>
+            <span class="article-title">Governance in the Age of Artificial Intelligence</span>
+            <span class="article-badge">AI Ethics</span>
+          </a>
+          <a class="article-row"
+            href="https://medium.com/@xzrxbb/an-intro-to-llms-and-their-training-process-e6599a4aec19"
+            target="_blank" rel="noopener noreferrer">
+            <span class="article-num" aria-hidden="true">04</span>
+            <span class="article-title">An Intro to LLMs and Their Training Process</span>
+            <span class="article-badge">LLMs</span>
+          </a>
+          <!-- Add more: duplicate the <a class="article-row"> block above -->
+        </nav>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-label">03 · Contact</p>
+        <h2 id="contact-heading">Say hello</h2>
+        <p class="section-intro">Got a project, a question, or just want to talk about AI and data? I'm pretty approachable — I promise.</p>
+
+        <div class="contact-grid">
+          <div class="fade-up">
+            <h3 class="contact-info-title">Let's talk</h3>
+            <p class="contact-intro">I'm open to new roles, consulting projects, speaking gigs, and technical collaborations. Or honestly, just a good conversation about data. Drop me a line.</p>
+            <div class="contact-links">
+              <a class="contact-link" href="tel:0886929415">
+                <div class="contact-link-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+                088-692-9415
+              </a>
+              <a class="contact-link" href="mailto:k.phannithiprasert@gmail.com">
+                <div class="contact-link-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+                k.phannithiprasert@gmail.com
+              </a>
+              <a class="contact-link" href="#">
+                <div class="contact-link-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></div>
+                Bangkok, Thailand
+              </a>
+              <a class="contact-link" href="https://medium.com/@xzrxbb" target="_blank" rel="noopener noreferrer">
+                <div class="contact-link-icon" aria-hidden="true"><i class="fab fa-medium"></i></div>
+                medium.com/@xzrxbb
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form fade-up" role="region" aria-labelledby="form-heading">
+            <h3 id="form-heading" style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:1.25rem;">Or just fill this in 👋</h3>
+            <form onsubmit="handleSubmit(event)" novalidate>
+              <div class="form-group">
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="Tell me what you have in mind..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send message
+              </button>
+              <p id="form-msg" role="alert" aria-live="polite">
+                ✓ Got it! I'll get back to you soon — usually within a day or two.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <span class="footer-copy">© 2025 Kamonphan Phannithiprasert · Bangkok, Thailand</span>
+      <div class="footer-links">
+        <a href="https://medium.com/@xzrxbb" target="_blank" rel="noopener noreferrer" aria-label="Medium profile">
+          <i class="fab fa-medium" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:k.phannithiprasert@gmail.com" aria-label="Email Kamonphan">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Scroll fade-in
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    // Contact form
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      setTimeout(() => {
+        document.getElementById('form-msg').style.display = 'block';
+        btn.style.display = 'none';
+        e.target.reset();
+      }, 900);
+    }
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => { a.style.color = ''; a.style.borderBottomColor = ''; });
+          con
